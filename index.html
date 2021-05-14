@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="images/logo.png" type="image/png">
+	<title>Home - Music Adda</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet"> 
+	
+	<style>	</style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" onclick="openNav()" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+			
+			<div class="logo"><a href="#"><img src="images/logo.png" /></a></div>
+			<a class="navbar-brand" href="#"><span class="myorange">Music</span> Adda</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar"  id="mySidenav" class="sidenav">
+			<ul class="nav navbar-nav navbar-center">
+				<li  id="Home" class="active"><a href="index.html">Home</a></li>
+				<li  id="Artists"><a href="artists.php">Artists</a></li>
+				<li  id="Albums"><a href="albums.php">Albums</a></li>
+				<li  id="AllSongs"><a href="all_songs.php">All Songs</a></li>
+			</ul>
+			<form class="navbar-form navbar-right" action="All_songs.php" method="POST">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search" name="searchsong">
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid" style="margin-top:70px;">    
+	<div class="row">
+		<div class="col-sm-1">
+			&nbsp;
+		</div>
+		<div class="col-sm-8">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-default about">
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12">
+										<table class="">
+											<tr>
+												<td width="10%"><img src="images/music-record.png" class="aboutlogo img-circle" alt="Cinque Terre"></td>
+												<td width="25%">
+													<h4>Music Adda</h4>
+													<p>
+													Pick a mood, song, or artist.<br/>
+													We ll play the perfect mix!
+													</p>
+												</td>
+												<td onclick="open_player('artist','Arijit_Singh');">
+													<img src="database/thumbnails/Arijit_Singh.jpg" class="img-circle" alt="Cinque Terre">
+													<br/><span>Arijit Singh</span>
+												</td>
+												<td onclick="open_player('artist','Shreya Ghoshal');">
+													<img src="database/thumbnails/Shreya_Ghoshal.jpg" class="img-circle" alt="Cinque Terre">
+													<br/><span>Shreya Ghoshal.jpg</span>
+												</td>
+												<td onclick="open_player('artist','AR_Rahman');">
+													<img src="database/thumbnails/AR_Rahman.jpg" class="img-circle" alt="Cinque Terre">
+													<br/><span>AR Rahman</span>
+												</td>
+												<td onclick="open_player('artist','Atif Aslam');">
+													<img src="database/thumbnails/Atif_Aslam.jpg" class="img-circle" alt="Cinque Terre">
+													<br/><span>Atif Aslam</span>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-default">
+							<div class="panel-heading"><strong>New Releases</strong></div>
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="thumbnail" onclick="open_player('album','Baaghi2');">
+											<a href="javascript:void(0);">
+												<img src="database/thumbnails/Baaghi2.jpg" alt="Lights" style="width:100%">
+												<div class="caption">
+												  <p>Baaghi2</p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-sm-3 col-md-3">
+										<div class="thumbnail" onclick="open_player('album','October');">
+											<a href="javascript:void(0);">
+												<img src="database/thumbnails/October.jpg" alt="Lights" style="width:100%">
+												<div class="caption">
+												  <p>October</p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="thumbnail" onclick="open_player('album','Naina-Album-2018');">
+											<a href="javascript:void(0);">
+												<img src="database/thumbnails/Naina-Album-2018.jpg" alt="Lights" style="width:100%">
+												<div class="caption">
+												  <p>Naina English 2018</p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="thumbnail" onclick="open_player('album','Hichki');">
+											<a href="javascript:void(0);">
+												<img src="database/thumbnails/Hichki.jpg" alt="Lights" style="width:100%">
+												<div class="caption">
+												  <p>Hichki</p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="thumbnail" onclick="open_player('album','Dhol Hindi');">
+											<a href="javascript:void(0);">
+												<img src="database/thumbnails/Dhol-Hindi-1997.jpg" alt="Lights" style="width:100%">
+												<div class="caption">
+												  <p>Dhol Hindi</p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="thumbnail" onclick="open_player('album','Nusrat-Bollywood-Originals-MIX');">
+											<a href="javascript:void(0);">
+												<img src="database/thumbnails/Nusrat-Bollywood-Originals-MIX.jpg" alt="Lights" style="width:100%">
+												<div class="caption">
+												  <p>Nusrat Bollywood Originals</p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="thumbnail" onclick="open_player('album','90s-Kumar-Sanu-Vs-Udit-Narayan-Hindi');">
+											<a href="javascript:void(0);">
+												<img src="database/thumbnails/90s-Kumar-Sanu-Vs-Udit-Narayan-Hindi.jpg" alt="Lights" style="width:100%">
+												<div class="caption">
+												  <p>Evergreen-90s</p>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="thumbnail" onclick="open_player('album','Katyar Kaljat Ghusli');">
+											<a href="javascript:void(0);">
+												<img src="database/thumbnails/Katyar-Kaljat-Ghusli.jpg" alt="Lights" style="width:100%">
+												<div class="caption">
+												  <p>KatyarKaljat Ghusli</p>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			&nbsp;
+		</div>
+	</div>
+</div>
+
+
+
+<form action="music_player.php" method="POST" id="open_musicplayer">
+	<input type="hidden" value="" id="category" name="category"> 
+	<input type="hidden" value="" id="name" name="name"> 
+</form>
+
+
+<!-- script -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+	function open_player(category, name){
+		document.getElementById('category').value=category;
+		document.getElementById('name').value=name;
+		document.getElementById('open_musicplayer').submit();
+	}
+</script>
+
+<!-- //script -->
+</body>
+</html>
